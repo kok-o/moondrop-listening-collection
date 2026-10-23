@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.git/
+.vercel/
+.env*
+research/
+screenshots/
+scripts/
+*.tsbuildinfo
+test-results/
+playwright-report/
+AGENTS.md
+DESIGN.md
+QA.md
+SOURCES.md
+README.md

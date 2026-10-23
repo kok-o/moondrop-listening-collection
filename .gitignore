@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+test-results/
+playwright-report/
+.vercel/
+.env*
+research/
+screenshots/
+__pycache__/
+*.py[cod]
