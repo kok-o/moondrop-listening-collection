@@ -11,13 +11,27 @@ npm run dev
 
 Production на Vercel: https://moondrop-listening-collection.vercel.app
 
-Папка связана с проектом `moondrop-listening-collection`. Для публикации обновлений:
+Репозиторий: https://github.com/kok-o/moondrop-listening-collection
+
+Папка связана с проектом Vercel `moondrop-listening-collection`. Каждый push в `main` автоматически запускает сборку и обновляет production-сайт после её успешного завершения. Пуши в другие ветки создают preview-деплои.
+
+После изменения кода:
+
+```sh
+git add .
+git commit -m "Update website"
+git push origin main
+```
+
+Сохранение файла на компьютере меняет только локальную версию. Для обновления опубликованного сайта нужно отправить коммит на GitHub. Если сборка завершается ошибкой, предыдущая рабочая версия сайта остаётся доступной.
+
+Ручная публикация при необходимости:
 
 ```sh
 npx vercel deploy --prod --verify
 ```
 
-Исследования, скриншоты, локальные переменные окружения и служебные файлы исключены через `.vercelignore`. Деплой выполняется через CLI; автоматическая публикация из Git не настроена.
+Исследования, скриншоты, локальные переменные окружения и служебные файлы исключены через `.gitignore` и `.vercelignore`. Доступ Vercel к репозиторию работает через интеграцию GitHub; токены деплоя в исходном коде и GitHub Actions не нужны.
 
 ```sh
 npm run typecheck
